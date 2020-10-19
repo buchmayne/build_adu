@@ -890,7 +890,7 @@ class Permits(models.Model):
 
 class PotentialAduParcels(models.Model):
     tlid = models.TextField(
-        db_column="TLID", blank=True, null=True
+        db_column="TLID", blank=True, null=False, primary_key=True
     )  # Field name made lowercase.
     primaccnum = models.TextField(
         db_column="PRIMACCNUM", blank=True, null=True
