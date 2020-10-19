@@ -80,7 +80,16 @@ WSGI_APPLICATION = "build_adu.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASES = {"default": {"default": env.db()}}
+DATABASES = {
+    "default": {
+        "ENGINE": "django.contrib.gis.db.backends.postgis",
+        "NAME": "shred",
+        "USER": "postgres",
+        "PASSWORD": "password",
+        "HOST": "localhost",
+        "PORT": 5432,
+    }
+}
 
 
 # Password validation
